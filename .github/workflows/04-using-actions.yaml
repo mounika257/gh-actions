@@ -21,4 +21,6 @@ jobs:
       - name: run npm
         run: npm run test
       - name: run npm
-        run: npm run start       
+        run: |
+          npm run start    
+          exit 0   
