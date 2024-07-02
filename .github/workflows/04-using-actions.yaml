@@ -20,7 +20,3 @@ jobs:
         run: npm ci
       - name: run npm
         run: npm run test
-      - name: run npm
-        run: |
-          npm run start    
-          exit 0   
