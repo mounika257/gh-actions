@@ -2,6 +2,7 @@ name: 01-building-blocks.yaml
 
 on: push
 
+
 jobs:
     echo-hello:
         runs-on: ubuntu-latest
