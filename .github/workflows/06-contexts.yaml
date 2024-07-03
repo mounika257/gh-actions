@@ -8,8 +8,8 @@ on:
             type: boolean
             default: false
 env: 
-    MY_WORKFLOW: 'job'
-    MY_OVERWRITTEN_VAR: 'job'
+    MY_WORKFLOW: 'workflow'
+    MY_OVERWRITTEN_VAR: 'workflow'
 
 jobs:
     echo-data:
@@ -40,4 +40,7 @@ jobs:
               run: |
                 echo "Variable: ${{env.MY_JOB_VAR}}"
                 echo "Variable: ${{env.MY_OVERWRITTEN_VAR}}"
-
+            - name: print Variable
+              run: |
+                echo "Variable: ${{env.MY_WORKFLOW}}"
+                echo "Variable: ${{env.MY_OVERWRITTEN_VAR}}"
