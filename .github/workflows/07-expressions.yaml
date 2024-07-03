@@ -12,11 +12,11 @@ jobs:
     echo:
      runs-on: ubuntu-latest
      steps:
-        - name: '[debug] print '
+        - name: '[debug] print'
           if: ${{inputs.debug}}
           run: |
                 echo "Triggered by: ${{github.Event_name}}"
-                echo "Branch: ${{github.Branch}}
+                echo "Branch: ${{github.Branch}}"
                 echo "Commit SHA: ${{github.sha}}"
                 echo  "Runner OS: $RUNNER_OS"
         - name: '[debug] Print when triggered'
