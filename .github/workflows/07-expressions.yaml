@@ -12,9 +12,9 @@ jobs:
     echo:
      runs-on: ubuntu-latest
      steps:
-        - name: [debug] Print start-up data
+        - name: [debug] print
           if: ${{inputs.debug}}
-          run:
+          run: |
                 echo "Triggered by: ${{github.Event_name}}"
                 echo "Branch: ${{github.Branch}}
                 echo "Commit SHA: ${{github.sha}}"
