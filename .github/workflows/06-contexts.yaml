@@ -44,3 +44,10 @@ jobs:
               run: |
                 echo "Variable: ${{env.MY_WORKFLOW}}"
                 echo "Variable: ${{env.MY_OVERWRITTEN_VAR}}"
+    echo-data2: 
+            runs-on: ubuntu-latest
+            steps:
+            - name: print env 
+              run: |
+                echo "Variable: ${{env.MY_WORKFLOW}}"
+                echo "Variable: ${{env.MY_OVERWRITTEN_VAR}}"
