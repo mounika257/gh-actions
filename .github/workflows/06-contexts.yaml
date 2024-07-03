@@ -7,10 +7,16 @@ on:
           debug:
             type: boolean
             default: false
+env: 
+    MY_WORKFLOW: 'job'
+    MY_OVERWRITTEN_VAR: 'job'
 
 jobs:
     echo-data:
         runs-on: ubuntu-latest
+        env: 
+            MY_JOB_VAR: 'job'
+            MY_OVERWRITTEN_VAR: 'job'
         steps:
             - name: Display Information
               run: |
@@ -24,5 +30,14 @@ jobs:
             - name: Retrieve Variable
               run: |
                 echo "Variable: ${{vars.MY_VAR}}"
-            
+            - name: print env
+              env: 
+               MY_OVERWRITTEN_VAR: 'step'
+              run: |
+                echo "Variable: ${{env.MY_JOB_VAR}}"
+                echo "over Variable: ${{env.MY_OVERWRITTEN_VAR}}"
+            - name: print Variable
+              run: |
+                echo "Variable: ${{env.MY_JOB_VAR}}"
+                echo "Variable: ${{env.MY_OVERWRITTEN_VAR}}"
 
