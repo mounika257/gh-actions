@@ -23,8 +23,8 @@ jobs:
     build: 
         runs-on: ubuntu-latest
         steps:
-            -name: 'Build'
-             run: echo "Building from tag ${{ inputs.tag}}"
+            - name: build
+              run: echo "Building from tag ${{ inputs.tag }}"
     deploy:
         runs-on: ubuntu-latest
         needs:
