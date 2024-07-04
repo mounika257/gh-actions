@@ -8,17 +8,17 @@ jobs:
   echo1:
     runs-on: ubuntu-latest
     steps:
-      - name: Failing step
+      - name: 'Failing step'
         run: exit 1
-      - name: I will be skipped
+      - name: 'I will be skipped'
         if: ${{success()}}
         run: echo "I will print if previous steps succeed"
-      - name: I will execute
+      - name: 'I will execute'
         if: ${{ failure() }}
         run: "I will print if any previous step fails."
-      - name: I will execute
+      - name: 'I will execute'
         if: ${{ !cancelled() }}
         run: "I will always print, except when the workflow is cancelled."
-      - name: I will execute when cancelled
+      - name: 'I will execute when cancelled'
         if: ${{ cancelled() }}
         run: "I will execute only when the workflow has been cancelled"
