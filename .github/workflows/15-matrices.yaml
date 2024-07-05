@@ -8,7 +8,7 @@ jobs:
         name: ${{matrix.os}}-${{matrix.node-versions}}
         runs-on: ubuntu-latest
         strategy:
-            fail-fast: true
+            fail-fast: false
             matrix:
                 node-versions: [18.x,20.x,21.x]
                 os:
