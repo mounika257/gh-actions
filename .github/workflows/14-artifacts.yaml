@@ -1,4 +1,4 @@
-name: 14-artifacts
+name: 14 - artifacts
 
 on: workflow_dispatch
 
