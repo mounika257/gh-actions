@@ -19,4 +19,4 @@ jobs:
               with: 
                 node-version: ${{matrix.node-versions}}
             - name: Perform some tests
-              run: echo "running on ${{matrix.os}}" and nodejs ${{matrix.node-versions}}"
+              run: echo "running on ${{matrix.os}} and nodejs ${{matrix.node-versions}}"
