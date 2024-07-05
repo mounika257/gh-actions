@@ -35,7 +35,7 @@ jobs:
               if: ${{inputs.use-cache}}
               id: cache
               with:
-                path: 13-caching/react-app/node-modules
+                path: 13-caching/react-app/node_modules
                 key: deps-on-modules-${{ '13-caching/react-app/package.json'}}
             - name: install dependencies
               if: steps.cache.outputs.cache-hit != true
