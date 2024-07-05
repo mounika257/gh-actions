@@ -38,7 +38,7 @@ jobs:
                 path: 13-caching/react-app/node_modules
                 key: deps-on-modules-${{ '13-caching/react-app/package.json'}}
             - name: install dependencies
-              if: steps.cache.outputs.cache-hit != true
+              if: steps.cache.outputs.cache-hit != 'true'
               run: |
                 npm ci
             - name: Testing
