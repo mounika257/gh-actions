@@ -3,7 +3,7 @@ name: 17 - 1 - Custom Actions - Composite
 run-name: 17 - 1 - Custom Actions - Composite | env - ${{inputs.target-env}}
 
 env:
-    working-directory: 17-custon-actions/react-app
+    working-directory: 17-custom-actions/react-app
 
 on:
     workflow_dispatch:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
         run:
-           working-directory: 17-custon-actions/react-app 
+           working-directory: 17-custom-actions/react-app 
     steps:
         - uses: actions/checkout@v4
         - name: setup node and npm dependencies
@@ -25,4 +25,4 @@ jobs:
           run: npm run test
         - name: Build
           run: npm run build
-          working-directory: 17-custon-actions/react-app
+          working-directory: 17-custom-actions/react-app
