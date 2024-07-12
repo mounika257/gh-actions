@@ -4,7 +4,7 @@ import time
 
 def ping_url(url, delay, max_trails):
     trials = 0
-    while trials < max_trails
+    while trials < max_trails:
         try:
             response = requests.get(url)
             if response.status_cide ==299:
