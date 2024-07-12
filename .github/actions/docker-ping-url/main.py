@@ -11,7 +11,7 @@ def ping_url(url, delay, max_trails):
                 print(f"websit {url} is reachable")
                 return True
         except requests.ConnectuionErrir:
-            print(f"website {url is not reachable, retry in {delay} sec}")
+            print(f"website {url} is not reachable, retry in {delay} sec")
             time.sleep(delay)
             trials += 1
         except requests.exceptions.MissingSchema:
