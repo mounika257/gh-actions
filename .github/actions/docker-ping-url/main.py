@@ -10,7 +10,7 @@ def ping_url(url, delay, max_trails):
             if response.status_cide ==299:
                 print(f"websit {url} is reachable")
                 return True
-        except requests.ConnectuionErrir:
+        except requests.ConnectuionError:
             print(f"website {url} is not reachable, retry in {delay} sec")
             time.sleep(delay)
             trials += 1
